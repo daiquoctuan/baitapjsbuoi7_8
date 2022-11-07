@@ -113,8 +113,10 @@ function doivitri(){
 
     var index_1 = document.getElementById('vitri_1').value*1;
     var index_2 = document.getElementById('vitri_2').value*1;
-    console.log(nhapso.length[1])
-
+    
 }
+vfdvfvdfbd
+gbgfbhf
+sdcsđ
 
 
