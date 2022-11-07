@@ -8,7 +8,7 @@ function nhapso_n() {
     if (nhapso.length === 0) {
         alert("vui lòng nhập số")
     }
-    console.log(nhapso)
+    // console.log(nhapso)
 }
 
 //2. đếm bao nhiêu số dương
@@ -63,7 +63,7 @@ function soduongNN() {
             maxduongnn = soduongnn;
             mang_1.push(maxduongnn)
         }
-    } 
+    }
     var minduong = mang_1[0];
     for (var j = 0; j < mang_1.length; j++) {
         var mangduongnho = mang_1[j];
@@ -73,13 +73,13 @@ function soduongNN() {
     }
     if (mang_1.length === 0) {
         mang_1 += "-1"
-        document.getElementById('soduongnn').innerHTML = mang_1 ;
+        document.getElementById('soduongnn').innerHTML = mang_1;
     } else {
         var resultsoduongnn = "Số dương nhở nhất là: " + minduong;
         document.getElementById('soduongnn').innerHTML = resultsoduongnn;
     }
-    
-    
+
+
 
 }
 
@@ -109,15 +109,36 @@ function sochancuoi() {
 }
 // đổi chỗ
 
-function doivitri(){
+function doivitri() {
 
-    var index_1 = document.getElementById('vitri_1').value*1;
-    var index_2 = document.getElementById('vitri_2').value*1;
-    
+    var index_1 = document.getElementById('vitri_1').value * 1;
+    var index_2 = document.getElementById('vitri_2').value * 1;
+
+    console.log(index_1)
+    console.log(index_2)
+
+
+    var doi = nhapso[index_1];
+    nhapso[index_1] = nhapso[index_2];
+    nhapso[index_2] = doi;
+    console.log(nhapso)
+    var resultdoicho = `Mảng đã đổi chỗ: ${nhapso}`;
+    document.getElementById('doicho').innerHTML = resultdoicho;
 }
-vfdvfvdfbd
-gbgfbhf
-sdcsđ
-fgdfsdfgdsf
-dfsgdsd
-gsfdgdsfgdfsgsdfg
+
+
+// sắp xếp tăng dần
+function sapxep() {
+    for (var i = 0; i < nhapso.length - 1; i++) {
+        for (j = i + 1; j < nhapso.length; j++) {
+            if (nhapso[i] > nhapso[j]) {
+                var item = nhapso[i];
+                nhapso[i] = nhapso[j];
+                nhapso[j] = item;
+
+            }
+        }
+    }console.log(nhapso)
+var resultdoisapxep = `Mảng tăng dần: ${nhapso}`;
+document.getElementById('sapxep').innerHTML = resultdoisapxep ;
+}
