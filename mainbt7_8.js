@@ -138,7 +138,33 @@ function sapxep() {
 
             }
         }
-    }console.log(nhapso)
-var resultdoisapxep = `Mảng tăng dần: ${nhapso}`;
-document.getElementById('sapxep').innerHTML = resultdoisapxep ;
+    }
+    var resultdoisapxep = `Mảng tăng dần: ${nhapso}`;
+    document.getElementById('sapxep').innerHTML = resultdoisapxep;
+}
+
+
+function sosanhamduong() {
+    var soam = "";
+    var soduong = "";
+    for (var i = 0; i < nhapso.length; i++) {
+        var item = nhapso[i];
+        if (item < 0) {
+            soam++
+        } else {
+            soduong++
+        }
+        } console.log(soam,soduong)
+   var sosanh = "";
+        if (soam > soduong) {
+sosanh  = "Số âm > số dương"
+    } else if(soam < soduong){
+        sosanh  = "Số âm < số dương"
+    } else { sosanh = " Số âm = số dương" }
+    document.getElementById('sochansoamduong').innerHTML = sosanh   ;
+}
+
+function songuyento(){
+    var nguyento = "";
+    for(var i = 0)
 }
